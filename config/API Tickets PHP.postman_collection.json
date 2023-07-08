@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "3622e377-5fda-4d1e-913c-62267cbc2198",
+		"name": "API Tickets PHP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17277321",
+		"_collection_link": "https://winter-rocket-459155.postman.co/workspace/Curso-Angular-2021---1FE~5e1af5a3-fe66-4fdd-8d30-76b93388f006/collection/17277321-3622e377-5fda-4d1e-913c-62267cbc2198?action=share&creator=17277321&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "GET - Obtener Tickets sin Filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/api-mini-tickets/tickets?orderBy=usuario&orderMode=desc&startAt=0&endAt=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api-mini-tickets",
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "usuario"
+						},
+						{
+							"key": "orderMode",
+							"value": "desc"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Obtener Tickets con Filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:80/api-mini-tickets/tickets?linkTo=usuario&equalTo=medina&orderBy=usuario&orderMode=desc&startAt=0&endAt=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api-mini-tickets",
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "usuario"
+						},
+						{
+							"key": "equalTo",
+							"value": "medina"
+						},
+						{
+							"key": "orderBy",
+							"value": "usuario"
+						},
+						{
+							"key": "orderMode",
+							"value": "desc"
+						},
+						{
+							"key": "startAt",
+							"value": "0"
+						},
+						{
+							"key": "endAt",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Guardar Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Federico Villa Valderrama",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "cerrado",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:80/api-mini-tickets/tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api-mini-tickets",
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Actualizar Ticket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Uriel Rabiola Yepes",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "abierto",
+							"type": "text"
+						},
+						{
+							"key": "fecha_actualizacion",
+							"value": "2023-07-09",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:80/api-mini-tickets/tickets?nameId=id&id=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api-mini-tickets",
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "nameId",
+							"value": "id"
+						},
+						{
+							"key": "id",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Eliminar Ticket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "usuario",
+							"value": "Uriel Rabiola Yepes",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "abierto",
+							"type": "text"
+						},
+						{
+							"key": "fecha_actualizacion",
+							"value": "2023-07-09",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:80/api-mini-tickets/tickets?nameId=id&id=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"api-mini-tickets",
+						"tickets"
+					],
+					"query": [
+						{
+							"key": "nameId",
+							"value": "id"
+						},
+						{
+							"key": "id",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
